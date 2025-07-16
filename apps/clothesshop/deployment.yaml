@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: clothesshop
-          image: alexkaie/clothesshop # {"$imagepolicy": "flux-system:clothesshop-policy"}
+          image: alexkaie/clothesshop:1.0.0 # {"$imagepolicy": "flux-system:clothesshop-policy"}
           ports:
             - containerPort: 3000
