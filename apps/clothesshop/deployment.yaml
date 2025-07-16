@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clothesshop
+  labels:
+    app: clothesshop
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: clothesshop
+  template:
+    metadata:
+      labels:
+        app: clothesshop
+    spec:
+      containers:
+        - name: clothesshop
+          image: alexkaie/clothesshop:1.0.0 # {"$imagepolicy": "flux-system:clothesshop-policy"}
+          ports:
+            - containerPort: 3000
