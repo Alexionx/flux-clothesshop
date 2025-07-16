@@ -18,3 +18,4 @@ spec:
         email: flux@example.com
   update:
     strategy: Setters
+    path: "./apps/clothesshop"
