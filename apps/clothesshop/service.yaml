@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: clothesshop
+  namespace: clothesshop
 spec:
   selector:
     app: clothesshop
