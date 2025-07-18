@@ -5,6 +5,9 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m
+  targetNamespace: ingress-nginx
+  install:
+    createNamespace: true
   chart:
     spec:
       chart: ingress-nginx
@@ -13,8 +16,8 @@ spec:
         kind: HelmRepository
         name: ingress-nginx
         namespace: flux-system
-  targetNamespace: ingress-nginx
   values:
     controller:
       service:
         type: NodePort
+  namespaceOverride: ingress-nginx
